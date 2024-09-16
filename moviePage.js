@@ -23,7 +23,7 @@ if(movies) {
 }
 
 const homePage = () => {
-  window.location.href = 'main.html'; 
+  window.location.href = 'index.html'; 
 }
 
 function checkVisibility() {
