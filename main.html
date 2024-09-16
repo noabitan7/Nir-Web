@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIR BITAN</title>
+    <link href="main.css" rel="styleSheet" type="text/css" />
+    <link rel="icon" href="assets/images/icon.png" type="image/png">
+</head>
+
+<body>
+    <div id="load">
+        <span class="loaderC"></span>
+        <span class="loader">Load&nbsp;ng</span>        
+    </div>
+
+    <div id="videoContainer">
+        <video id="showReel" playsinline loop autoplay muted>
+            <source src="assets/images/showreel.mp4" type="video/mp4">
+            <p>sorry, your browser doesn't support embedded videos. here's the <a href="">link to the <video src=""></video></a></p>
+        </video>
+    </div>
+    <div id="navBarBackground">
+        <div id="navBar">
+            <div id="videoNavbar" class="navbarItems">VIDEOGRAPHY</div>
+            <div id="directingNavbar" class="navbarItems">DIRECTING</div>
+            <div id="aboutNavbar" class="navbarItems">ABOUT</div>
+        </div>
+        <div id="hamburgerMenu">
+            <div id="hamburgerIcon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div id="hamburgerLinks" class="hidden">
+                <div id="videoNavbarHamburger" class="navbarItems">VIDEOGRAPHY</div>
+                <div id="directingNavbarHamburger" class="navbarItems">DIRECTING</div>
+                <div id="aboutNavbarHamburger" class="navbarItems">ABOUT</div>
+            </div>
+        </div>
+        <div id="nirName">NIR BITAN</div>
+    </div>
+    <div id="videography" class="create">
+        <div id="videographyTag">VIDEOGRAPHY</div>
+        <div id="videographyCarrousel">
+            <div class="buttons">
+                <button id="prevV" class="arrow left"><img src="assets/images/arrowLeft.png"></button>
+             </div>
+            <div id="videoC" class="carousel">
+                <!-- Use of classnames
+              hideleft = img -3 is totally hidden
+              prevSecond = img -2 is reduced and set back
+              prev = img -1 is reduced and set back
+              selected = img is centered and at the first plan
+              next = img +1 is enhanced and brought to the fore
+              nextSecond = img +2 is unhidden and brought to the fore
+              hideRight = img +3 is totally hidden
+            -->
+                <a class="prev V"><img id="brioche" alt="brioche"
+                    class="filmName" src="assets/images/videography/brioche/choosenPic.png">
+                </a>
+                <a class="selected V"><img id="inKent" alt="in Kent" class="filmName"
+                    src="assets/images/videography/in kent/choosenPic.png">
+                </a>
+                <a class="next V">
+                    <img id="thankYouForComing"  alt="thank You For Coming"
+                    class="filmName" src="assets/images/videography/thank you for coming/choosenPic.png">
+                </a>
+                <a class="nextSecond V"><img id="theClocksCruelNecessity" alt="the Clocks Cruel Necessity"
+                    class="filmName" src="assets/images/videography/The Clocks Cruel Necessity/choosenPic.png">
+                </a>
+            </div>
+            <div class="buttons">
+                <button id="nextV" class="arrow right"><img src="assets/images/arrowRight.png"></button>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <div id="directing" class="create">
+        <div id="directingTag">DIRECTING</div>
+        <div id="directingCarrousel">
+            <div class="buttons">
+                <button id="prevD" class="arrow left"><img src="assets/images/arrowLeft.png"></button>
+             </div>
+            <div id="directC" class="carousel">
+                <a class="prev D"><img id="homeMemories" alt="home Memories"
+                    class="filmName" src="assets/images/directing/home memories/choosenPic.png">
+                </a>
+                <a class="selected D"><img id="reality" alt="reality" class="filmName"
+                    src="assets/images/directing/reality/choosenPic.png">
+                </a>
+                <a class="next D">
+                    <img id="theMerchantOfVenice"  alt="the Merchant Of Venice" 
+                    class="filmName" src="assets/images/directing/the merchant of venice/choosenPic.png">
+                </a>
+                <a class="nextSecond D"><img id="untitled" alt="untitled"
+                    class="filmName" src="assets/images/directing/untitled/choosenPic.png">
+                </a>
+            </div>
+            <div class="buttons">
+                <button id="nextD" class="arrow right"><img src="assets/images/arrowRight.png"></button>
+            </div>
+        </div>
+    </div>
+    <div id="aboutTag">ABOUT</div>
+    <div id="about" class="create">
+        <div id="paragraphAbout">
+            <!-- <h1>NIR BITAN</h1> -->
+            <p>
+
+With over 8 years behind the camera, I have perfected my art as a videographer, specializing in creating visually stunning narratives.
+I am deeply passionate about storytelling and constantly exploring new ways to push the boundaries of visual creativity.
+            </p>
+        </div>
+        <div id="imageAbout"></div>
+    </div>
+    <div id="contactBackground" class="create">
+
+      <svg id="wave" class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+      <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+      <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0,0,0,0.7)" />
+      <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0,0,0,0.5)" />
+      <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,0,0,0.3)" />
+      <use xlink:href="#gentle-wave" x="48" y="7" fill="#000" />
+      </g>
+      </svg>
+    </div>
+    
+    <div id="contantAbout">
+        <p>contact</p>
+        <div id="contact">
+            <a herf="tel:+972502550586" ></a><img id="phone" onclick="return handleTelLink();" src="assets/images/about/phone.png">
+            <a href="mailto:nirbitan2@gmail.com"><img id="mail" src="assets/images/about/mail.png"></a>
+            <a href="https://www.instagram.com/nir.bitan?igsh=MXBqcmlucXR5ZjFubw=="><img id="instagram" src="assets/images/about/instagram.png"></a>
+        </div>
+        <a id="credit" href="https://www.instagram.com/noabitan7/?igsh=aGU0cmk4YXNuanZp">developed by Noa Bitan</a>        
+    </div>
+    <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    <script src="main.js" type="text/javascript"></script>
+    <!-- <iframe id="movie" width="640" height="360" src="https://www.youtube.com/embed/e3Nl_TCQXuw?autoplay=1" allowfullscreen frameborder="0"></iframe> -->
+</body>
+</html>

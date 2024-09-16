@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIR BITAN</title>
+    <link href="moviePage.css" rel="styleSheet" type="text/css" />
+    <link rel="icon" href="assets/images/icon.png" type="image/png">
+</head>
+<body>
+    <div id="navBarBackground">
+        <!-- <div id="navBar">
+            <div id="videoNavbar" class="navbarItems">VIDEOGRAPHY</div>
+            <div id="directingNavbar" class="navbarItems">DIRECTING</div>
+            <div id="aboutNavbar" class="navbarItems">ABOUT</div>
+        </div> -->
+        <div id="nirName">NIR BITAN</div>
+        <div id="homeScreenButtom"><img id="backHomeImg" src="assets/images/backHome.png" alt="backHomeButtom"></div>
+    </div>
+    <div id="filmName"> Film Name</div>
+    <div id="movieDisplay">
+        <div class="buttons">
+            <button id="prev" class="arrow left"><img src="assets/images/arrowLeft.png"></button>
+         </div>
+         <div id="videoContainer"><iframe id="movie" width="840" height="560" src="" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+         <div class="buttons">
+            <button id="next" class="arrow right"><img src="assets/images/arrowRight.png"></button>
+        </div>
+    </div>
+    <div id="credits" class="create">
+        <div>
+            <p>EDITING</p>
+            <p id="editor">NOA BITAN</p>
+        </div>
+        <div>
+            <p>DIRECTING</p>
+            <p id="director">NIR BITAN</p>
+        </div>
+        <div>
+            <p>PHOTO</p>
+            <p id="photographer">RON BITAN</p>
+        </div>
+    </div>
+    <div id="overlay" class="hidden">
+        <div id="overlay-bg"></div>
+        <img id="imageShow" src="assets/images/directing/home memories/choosenPic.png" alt="imageShow">
+    </div>
+    <div id="images"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+    <script src="moviePage.js" type="text/javascript"></script>
+</body>
+</html>

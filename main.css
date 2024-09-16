@@ -1,0 +1,961 @@
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 20px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    font-family: intro;
+    direction: ltr;
+    background-color: #1d1c1c;
+    color: #f5f5f5;
+}
+
+body {
+  position: relative;
+  font-size: 1rem;
+}
+
+@font-face {
+    font-family: futuraLtBt;
+    src: url(assets/fonts/futura\ light\ bt.ttf);
+}
+
+@font-face {
+    font-family: futuraClight;
+    src: url(assets/fonts/Futura-CondensedLight.otf);
+}
+
+@font-face {
+  font-family: rocket;
+  src: url(assets/fonts/rocketwildness-7bb8r.ttf);
+}
+
+@font-face {
+  font-family: intro;
+  src: url(assets/fonts/IntroRust/Non-commercial/OTF/IntroRustL-Trial-Line.otf);
+}
+
+
+#navBarBackground {
+    left: 0;
+    width: 100%;
+    background-color: #111111;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* margin: 0 5rem 0 0; */
+    padding: 0 3rem;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#navBar {
+    display: flex;
+    justify-content: space-between; /* Distributes items along the navBar */
+    align-items: center;
+    height: 100%;
+    width: 30rem; /* You might need to adjust this width depending on your design needs */
+    position: absolute;
+    left: 0%;
+    padding-left: 2rem;
+}
+
+.navbarItems {
+    color: #f5f5f5;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#nirName {
+    font-size: 2rem;
+    font-family: intro;
+    position: relative; 
+    top: 50%;
+    left: 0%;
+    padding-bottom: 3rem;
+    z-index: 2;
+    color: #f5f5f5;
+}
+
+#videoContainer {
+    position: relative;
+    height: 100vh; /* Adjust if video is not supposed to be full screen */
+    width: 100vw;
+}
+
+#videoContainer video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#videographyTag, #directingTag, #aboutTag{
+  position: relative;
+  left: 0;
+  width: 100%;
+  border-top: solid #f5f5f5 1px;
+  border-bottom: solid #f5f5f5 1px;
+  color: #f5f5f5;
+  font-size: 1.5rem;
+  height: 7vh;
+  align-content: center;
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Customizes the whole scrollbar */
+::-webkit-scrollbar {
+    width: 10px;  /* or 'height' for horizontal scrollbars */
+}
+
+/* Customizes the draggable part of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: #262626;
+    border-radius: 10px;  /* Adjusts the shape */
+    border: 2px solid rgb(48, 47, 47); /* Adds a border */
+}
+
+/* Customizes the (optional) scrollbar track */
+::-webkit-scrollbar-track {
+    background: #111111;
+    border-radius: 5px; /* Round corners of the track */
+}
+
+/* Customizes the scrollbar corner (area at the end of the scrollbar) */
+::-webkit-scrollbar-corner {
+    background: rgb(255, 255, 254);
+}
+
+#videographyCarrousel, #directingCarrousel{
+    margin: auto;
+    padding-top: 5rem;
+    width: 100%;
+    /* position: relative;
+    max-width: 600px; /* Adjust based on your preference */
+    /* overflow: hidden; */ 
+}
+
+#paragraphAbout{
+    position: relative;
+    width: 40%;
+}
+
+#paragraphAbout h1{
+    font-size: 2.5rem;
+}
+
+#paragraphAbout p{
+  margin: 6rem 0rem 0rem 2rem;
+    font-size: 1.5rem;
+    font-family: futuraLtBt;
+    text-align: justify;
+    /* text-transform: uppercase; */
+}
+
+#imageAbout{
+    position: relative;
+    background-image: url(assets/images/about.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 25vw;
+    margin-top: 2rem;
+}
+
+#contactBackground{
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+  display: none;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:40vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:250px;
+  bottom: 0%;
+  left: 0%;
+}
+
+#about{
+  display: flex;
+  justify-content: space-around;
+  /* margin-top: 5rem; */
+}
+
+#contact{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 10%;
+  position: absolute;
+  bottom: 0%;
+  padding-left: 5.7rem;
+}
+
+#contactAbout{
+  opacity: 0;
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+  padding-bottom: 1rem;
+}
+
+#contantAbout p{
+  font-size: 2rem;  
+  padding-left: 5.5rem;
+  padding-bottom: 2rem;
+  position: absolute;
+  bottom: 0%;
+}
+
+#phone{
+  width: 3rem;
+  cursor: pointer;
+}
+
+#mail{
+  height: 4rem;
+  cursor: pointer;
+  width: 4rem;
+}
+
+#instagram{
+  height: 2.5rem;
+  cursor: pointer;
+  width: 2.5rem;
+}
+
+#credit{
+  position: absolute;
+  font-size: 1rem;
+  z-index: 3;
+  cursor: pointer;
+  bottom: 0.5%;
+  right: 2%;
+  color: #f5f5f5;
+}
+
+.create{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+:root {
+  --ImgSizeX : 50vw;
+  --ImgSizeY : calc(var(--ImgSizeX) / 4 * 3);
+  --scaler: 5vw;
+}
+
+/* h1 {
+  background: linear-gradient(to bottom, #cfc09f 22%, #634f2c 24%, #cfc09f 26%, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 2em;
+  text-align: center;
+  background: radial-gradient(ellipse at center, DarkGoldenRod 0%, black 100%);
+} */
+
+.carousel {
+  display: flex;
+  justify-content: space-around;
+  height: var(--ImgSizeY);
+}
+
+.carousel a {
+  aspect-ratio: 4/3;
+  position: absolute;
+  cursor: pointer;
+  transition: transform 1s, left 1.2s, opacity 1s, z-index 0s;
+  opacity: 1;
+}
+
+.carousel a img {
+  width: var(--ImgSizeX);
+  height: 85%;
+  transition: width 1.2s;
+}
+
+.column a img{
+  width:var(--ImgSizeX);
+  transition: width 1.2s;
+}
+
+.carousel a.hideLeft {
+  left: 0%;
+  opacity: 0;
+  transform: translateY(50%) translateX(0%);
+}
+
+.carousel a.hideLeft img,
+.carousel a.hideRight img {
+  width: calc(var(--ImgSizeX) / 2);
+  opacity: 0;
+}
+
+.carousel a.hideRight {
+  left: 100%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-100%);
+}
+
+.carousel a.prev {
+  z-index: 5;
+  left: 30%;
+  transform: translateY(17.5%) translateX(-50%);
+}
+
+.carousel a.prev img,
+.carousel a.next img {
+  width: calc(var(--ImgSizeX) / 4 * 3);
+}
+
+.carousel a.prevSecond {
+  z-index: 4;
+  left: 15%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0;
+}
+
+.carousel a.prevSecond img,
+.carousel a.nextSecond img {
+  width: calc(var(--ImgSizeX) / 2);
+  opacity: 0;
+}
+
+.carousel a.selected {
+  z-index: 6;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+}
+
+.carousel a.next {
+  z-index: 5;
+  left: 70%;
+  transform: translateY(17.5%) translateX(-50%);
+}
+
+.carousel a.nextSecond {
+  left: 85%;
+  transform: translateY(50%) translateX(-50%);
+}
+
+.buttons {
+  display: flex; 
+  justify-content: space-between;
+  /* margin: auto; */
+  height: fit-content;
+}
+
+.buttons button {
+  background: transparent;
+  border: inherit;
+}
+
+.arrow {
+  z-index: 10;
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
+  opacity: 0.7;
+  padding: 1rem;
+}
+
+.left{
+  left: 2%;
+}
+
+.right{
+  right: 2%;
+}
+
+.left:hover, .left:focus,
+.right:hover, .right:focus {
+  opacity: 1;
+}
+
+.left:active, .right:active {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+.buttons img{
+  width: 30px;
+  height: 180px;
+}
+
+.column a img {
+  padding: 1rem;
+}
+
+.column{
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 100%;
+  align-items: center;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)    infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -4s;
+  animation-duration: 7s;
+  animation-play-state: paused;
+
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+.loaderC {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #FFF;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin-bottom: 4rem;
+}
+
+.loader {
+  color: #FFF;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 0.15rem;
+  box-sizing: border-box;
+}
+.loader::before {
+  content: '';
+  position: absolute;
+  right: 5.2rem;
+  bottom: 1rem;
+  height: 1.5rem;
+  width: 0.1rem;
+  background: currentColor;
+  box-sizing: border-box;
+}
+.loader::after {
+  content: '';
+  width: 0.2rem;
+  height: 0.2rem;
+  background: currentColor;
+  position: absolute;
+  right: 5.15rem;
+  bottom: 1.3rem;
+  box-sizing: border-box;
+  animation: animloader 0.6s ease-out infinite alternate;
+}
+
+#load{
+  position: fixed;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d1c1c;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+}
+
+@keyframes animloader {
+  0% {
+    top: 8px;
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    top: 0px;
+    transform: rotate(180deg) scale(1.5);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+
+@-webkit-keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+
+@keyframes createWave {
+  0% {
+    max-height:0px;
+  }
+  100% { 
+    max-height:250px;
+  }
+}
+
+@-webkit-keyframes createWave {
+  0% {
+    max-height:0px;
+   }
+   100% { 
+    max-height:250px;
+   }
+}
+
+#hamburgerMenu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+#hamburgerIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 3rem;
+  height: 1.5rem;
+  cursor: pointer;
+  z-index: 5;
+}
+
+#hamburgerIcon .bar1,
+#hamburgerIcon .bar2,
+#hamburgerIcon .bar3 {
+  width: 100%;
+  height: 1px;
+  background-color: #f5f5f5;
+  transition: 0.3s;
+}
+
+#hamburgerLinks {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #111111;
+}
+
+#hamburgerLinks .navbarItems {
+  color: #f5f5f5;
+  font-size: 1.5rem;
+  padding: 3rem 0rem 0rem 2.5rem;
+}
+
+#hamburgerLinks.hidden {
+  display: none;
+}
+
+#hamburgerLinks.open {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 1s ease-in-out;
+  z-index: 3;
+}
+
+#hamburgerIcon.open{
+  position: fixed;
+  top: 2rem;
+  left: 2.5rem;
+}
+
+#hamburgerIcon.open .bar1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+#hamburgerIcon.open .bar2 {
+  opacity: 0;
+}
+
+#hamburgerIcon.open .bar3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+/* Extra Small Devices (Mobile Phones) */
+@media (min-width: 320px) and (max-width: 480px) {
+  html {
+    font-size: 10px;
+  }
+
+  #videoContainer {
+    height: 35vh; /* Adjust height to make sure it fits well on smaller screens */
+    width: 100vw; /* Full width */
+  }
+
+  #videoContainer video {
+    width: 100vw; /* Full width */
+    height: 35vh; /* Adjust height for phones */
+    object-fit: cover; /* Ensures the video covers the container */
+  }
+
+  .buttons{
+    display: none;
+  }
+
+  #navBarBackground {
+    justify-content: flex-start; /* Align items to the right */
+  }
+
+  #hamburgerIcon {
+    font-size: 1.5rem;
+  }
+
+  #hamburgerLinks {
+    display: flex;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding-top: 2rem;
+  }
+
+  #hamburgerLinks .navbarItems {
+    font-size: 2rem;
+  }  
+  #hamburgerMenu {
+    display: flex;
+  }
+  #navBar {
+    display: none;
+  }
+
+  #nirName {
+    padding-bottom: 5rem;
+    left: 30%;
+  }
+
+  .parallax > use:nth-child(1) {
+    animation-duration: 5s;
+  }
+
+  .parallax > use:nth-child(2) {
+    animation-duration: 8s;
+  }
+
+  .parallax > use:nth-child(3) {
+    animation-duration: 10s;
+  }
+
+  .parallax > use:nth-child(4) {
+    animation-duration: 15s;
+  }
+
+  #wave {
+    height: 80px; /* Adjust height for smaller screens */
+  }
+  #about{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #paragraphAbout p {
+    margin: 1rem 0rem 0rem 0rem;
+    font-size: 1.1rem;
+  }
+  #imageAbout {
+    margin-top: 3rem;
+    height: 20vh;
+    width: 37vw;
+  }
+
+  #contantAbout{
+    position: relative;
+    left: 17%;
+    width: 80%;
+  }
+
+  #credit{
+    right: 0%;
+  }
+
+  #contantAbout p{
+    padding-left: 2rem;
+  }
+  /* Other styles specific to mobile phones */
+}
+
+/* Small Devices (Tablets in Portrait Mode) */
+@media (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }  
+
+  #navBarBackground {
+    justify-content: flex-start; /* Align items to the right */
+  }
+
+  #hamburgerIcon {
+    font-size: 1.5rem;
+  }
+
+  #hamburgerLinks {
+    display: flex;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding-top: 2rem;
+  }
+
+  #directingCarrousel,
+  #videographyCarrousel{
+    margin: 0rem;
+    padding-top: 2rem;
+    width: 100%;
+  }
+  #hamburgerLinks .navbarItems {
+    font-size: 1.7rem;
+  }  
+  #hamburgerMenu {
+    display: flex;
+  }
+  #navBar {
+    display: none;
+  }
+
+  .buttons img{
+    width: 1.5rem;
+    height: auto;
+  }
+
+  #imageAbout {
+    margin-top: 3rem;
+    height: 30vh;
+    width: 33vw;
+  }
+
+  #paragraphAbout p {
+    margin: 8.5rem 0rem 0rem 2rem;
+    font-size: 1.2rem;
+  }
+  #nirName {
+    padding-bottom: 5rem;
+    left: 30%;
+  }
+
+  #videoContainer {
+    height: 35vh; /* Adjust height to make sure it fits well on smaller screens */
+    width: 100vw; /* Full width */
+  }
+
+  #videoContainer video {
+    width: 100vw; /* Full width */
+    height: 35vh; /* Adjust height for phones */
+    object-fit: cover; /* Ensures the video covers the container */
+  }
+
+  /* Other styles specific to tablets in portrait mode */
+}
+
+/* Medium Devices (Tablets in Landscape Mode) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+  .carousel-item img {
+    width: 50%;
+  }  
+  
+  #videoContainer {
+    width: 100vw;
+    height: 70vh; /* Adjust height for tablets */
+  }
+
+  #videoContainer video {
+    width: 100vw; /* Full width */
+   height: 70vh; /* Adjust height for tablets */
+  }
+  #navBarBackground {
+    justify-content: flex-start; /* Align items to the right */
+  }
+
+  #hamburgerIcon {
+    font-size: 1.5rem;
+  }
+
+  #hamburgerLinks {
+    display: flex;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding-top: 2rem;
+  }
+  #hamburgerLinks .navbarItems {
+    font-size: 1.2rem;
+    padding: 3rem 0rem 0rem 1rem;
+  }  
+  #hamburgerMenu {
+    display: flex;
+  }
+  #navBar {
+    display: none;
+  }
+  #nirName {
+    padding-bottom: 3rem;
+    left: 30%;
+  }
+
+  .parallax > use:nth-child(1) {
+    animation-duration: 6s;
+  }
+
+  .parallax > use:nth-child(2) {
+    animation-duration: 9s;
+  }
+
+  .parallax > use:nth-child(3) {
+    animation-duration: 12s;
+  }
+
+  .parallax > use:nth-child(4) {
+    animation-duration: 18s;
+  }
+
+  #wave {
+    height: 120px; /* Adjust height for medium screens */
+  }
+
+  #imageAbout {
+    margin-top: 3rem;
+    height: 37vh;
+    width: 33vw;
+  }
+  #paragraphAbout p {
+    margin: 6rem 0rem 0rem 2rem;
+    font-size: 1rem;
+  }
+  /* Other styles specific to tablets in landscape mode */
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  html {
+      font-size: 12px;
+  }
+  #videoContainer {
+    height: 85vh;
+    width: 100vw; /* Adjust height for tablets */
+  }
+
+  #videoContainer video {
+    width: 100vw; /* Full width */
+   height: 85vh; /* Adjust height for tablets */
+  }
+
+  /* Styles specific to laptops and desktops */
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  html {
+      font-size: 12px;
+  }
+  #videoContainer {
+    height: 100vh;
+    width: 100vw; /* Adjust height for tablets */
+  }
+
+  #videoContainer video {
+    width: 100vw; /* Full width */
+   height: 100vh; /* Adjust height for tablets */
+  }
+  /* Styles specific to laptops and desktops */
+}
+
+
+/* Large Devices (Laptops and Desktops) */
+@media (min-width: 1441px) and (max-width: 1920px) {
+  html {
+      font-size: 18px;
+  }
+  /* Styles specific to laptops and desktops */
+}
+
+
+
+
+
+
+
+
+
+
+
