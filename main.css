@@ -93,16 +93,16 @@ body {
 }
 
 #videoContainer {
-    position: relative;
-    height: 100vh; /* Adjust if video is not supposed to be full screen */
-    width: 100vw;
+  position: relative;
+  height: 100vh; /* Adjust if video is not supposed to be full screen */
+  width: 100vw;
 }
 
 #videoContainer video {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    cursor: pointer;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 #videographyTag, #directingTag, #aboutTag{
@@ -635,6 +635,10 @@ body {
   html {
     font-size: 10px;
   }
+  .column a img{
+    width: calc(var(--ImgSizeX)* 1.6);
+    transition: width 1.2s;
+  }
 
   #videoContainer {
     height: 35vh; /* Adjust height to make sure it fits well on smaller screens */
@@ -710,7 +714,7 @@ body {
     height: 80px; /* Adjust height for smaller screens */
   }
   #about{
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
     align-items: center;
   }
   #paragraphAbout p {
@@ -719,7 +723,7 @@ body {
   }
   #imageAbout {
     margin-top: 3rem;
-    height: 20vh;
+    height: 21vh;
     width: 37vw;
   }
 
@@ -736,6 +740,10 @@ body {
   #contantAbout p{
     padding-left: 2rem;
   }
+
+  #contact {
+    padding-left: 1rem;
+  }
   /* Other styles specific to mobile phones */
 }
 
@@ -744,6 +752,11 @@ body {
   html {
     font-size: 12px;
   }  
+
+  .column a img{
+    width: calc(var(--ImgSizeX)* 1.6);
+    transition: width 1.2s;
+  }
 
   #navBarBackground {
     justify-content: flex-start; /* Align items to the right */
@@ -792,8 +805,8 @@ body {
 
   #imageAbout {
     margin-top: 3rem;
-    height: 30vh;
-    width: 33vw;
+    height: 33vh;
+    width: 31vw;
   }
 
   #paragraphAbout p {
@@ -827,7 +840,7 @@ body {
   .carousel-item img {
     width: 50%;
   }  
-  
+
   #videoContainer {
     width: 100vw;
     height: 70vh; /* Adjust height for tablets */
