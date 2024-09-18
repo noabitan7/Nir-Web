@@ -60,7 +60,7 @@ var filmsProperties =  [
       editing: "NIR BITAN",
       directing: "NIR BITAN",
       photo: "NIR BITAN",
-      src: "https://www.youtube.com/watch?v=20G_iYr5Hi8",
+      src: "https://www.youtube.com/embed/20G_iYr5Hi8?si=43iUcCJ5wY6IZ3LT",
       shoots: 6,
       url: "assets/images/directing/untitled/"
   },
