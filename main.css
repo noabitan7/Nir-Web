@@ -96,13 +96,19 @@ body {
     position: relative;
     height: 100vh; /* Adjust if video is not supposed to be full screen */
     width: 100vw;
+    overflow: hidden;
 }
 
-#videoContainer video {
+#videoContainer iframe {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 100vw;
     height: 100vh;
+    transform: translate(-50%, -50%);
     object-fit: cover;
-    cursor: pointer;
+    pointer-events: none;
 }
 
 #videographyTag, #directingTag, #aboutTag{
