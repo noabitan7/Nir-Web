@@ -275,33 +275,29 @@ window.addEventListener("load", (event) => {
 
   window.addEventListener("scroll", () => {
     const navBarBackground = document.getElementById('navBarBackground');
-    const videoElement = document.getElementById('showReel').getBoundingClientRect();
+    const videoElement = video.getBoundingClientRect();
     const videoBottom = videoElement.bottom;
-  
-    if (videoBottom <= 0) {
+
+    if(videoBottom <= 0){
       navBarBackground.classList.add('sticky');
-      // Pause the YouTube video by sending a message to the iframe
-      document.getElementById('showReel').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-      document.getElementById('showReel').contentWindow.postMessage('{"event":"command","func":"seekTo","args":[0, true]}', '*');
+      video.pause();
+      video.currentTime = 0;
     } else {
       navBarBackground.classList.remove('sticky');
-      // Play the YouTube video
-      document.getElementById('showReel').contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+      video.play();
     }
+
   });
-  
-  document.getElementById("videoContainer").addEventListener("click", function() {
-    const videoIframe = document.getElementById('showReel');
-    if (!press) {
-      // Unmute YouTube video
-      videoIframe.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
-      press = true;
+
+  document.getElementById("videoContainer").addEventListener("click", function(){
+    if(!press){
+      video.muted = false;
+      press = true;      
     } else {
-      // Mute YouTube video
-      videoIframe.contentWindow.postMessage('{"event":"command","func":"mute","args":""}', '*');
-      press = false;
+      video.muted = true;
+      press = false;       
     }
-  });
+  }); 
 
   if (window.matchMedia(`(max-width: 480px)`).matches) {
     // Remove class if viewport width is less than or equal to the breakpoint

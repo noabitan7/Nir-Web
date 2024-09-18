@@ -93,22 +93,16 @@ body {
 }
 
 #videoContainer {
-    position: relative;
-    height: 100vh; /* Adjust if video is not supposed to be full screen */
-    width: 100vw;
+  position: relative;
+  height: 100vh; /* Adjust if video is not supposed to be full screen */
+  width: 100vw;
 }
 
-#videoContainer iframe {
-    cursor: pointer;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-}
-
-.html5-video-player{
-  height: 100%;
-  width: 100%;
+#videoContainer video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 #videographyTag, #directingTag, #aboutTag{
@@ -646,12 +640,6 @@ body {
     transition: width 1.2s;
   }
 
-  .html5-video-player{
-    height: 35%;
-    width: 100%;
-  }
-  
-
   #videoContainer {
     height: 35vh; /* Adjust height to make sure it fits well on smaller screens */
     width: 100vw; /* Full width */
@@ -766,11 +754,6 @@ body {
     transition: width 1.2s;
   }
 
-  .html5-video-player{
-    height: 35%;
-    width: 100%;
-  }
-
   #navBarBackground {
     justify-content: flex-start; /* Align items to the right */
   }
@@ -854,11 +837,6 @@ body {
     width: 50%;
   }  
 
-  .html5-video-player{
-    height: 60%;
-    width: 100%;
-  }
-  
   #videoContainer {
     width: 100vw;
     height: 70vh; /* Adjust height for tablets */
