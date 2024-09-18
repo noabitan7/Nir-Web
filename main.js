@@ -282,6 +282,7 @@ window.addEventListener("load", (event) => {
       navBarBackground.classList.add('sticky');
       // Pause the YouTube video by sending a message to the iframe
       document.getElementById('showReel').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      document.getElementById('showReel').contentWindow.postMessage('{"event":"command","func":"seekTo","args":[0, true]}', '*');
     } else {
       navBarBackground.classList.remove('sticky');
       // Play the YouTube video
