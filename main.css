@@ -635,6 +635,10 @@ body {
   html {
     font-size: 10px;
   }
+  .column a img{
+    width: calc(var(--ImgSizeX)* 1.6);
+    transition: width 1.2s;
+  }
 
   #videoContainer {
     height: 35vh; /* Adjust height to make sure it fits well on smaller screens */
@@ -709,10 +713,10 @@ body {
   #wave {
     height: 80px; /* Adjust height for smaller screens */
   }
-/*   #about{
-    flex-direction: column-reverse;
+  #about{
+    /* flex-direction: column-reverse; */
     align-items: center;
-  } */
+  }
   #paragraphAbout p {
     margin: 1rem 0rem 0rem 0rem;
     font-size: 1.1rem;
@@ -744,6 +748,11 @@ body {
   html {
     font-size: 12px;
   }  
+
+  .column a img{
+    width: calc(var(--ImgSizeX)* 1.6);
+    transition: width 1.2s;
+  }
 
   #navBarBackground {
     justify-content: flex-start; /* Align items to the right */
