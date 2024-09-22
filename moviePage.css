@@ -171,6 +171,9 @@ body {
     width: 100%; /* Ensure full width of the div */
     text-align: center;
 }
+#d, #e, #v{
+    font-size: 3rem;
+}
 
 .create{
     opacity: 0;
