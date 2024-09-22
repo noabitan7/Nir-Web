@@ -151,11 +151,14 @@ body {
     border-top: solid #f5f5f5 1px;
     border-bottom: solid #f5f5f5 1px;
     color: #f5f5f5;
-    font-size: 2rem;
     height: 12vh;
     display: flex;
     justify-content: space-around;
     align-items: center;  
+}
+
+#director, #editor, #photographer{
+    font-size: 2rem;
 }
 
 #credits div{
