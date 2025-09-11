@@ -280,11 +280,11 @@ window.addEventListener("load", (event) => {
 
     if(videoBottom <= 0){
       navBarBackground.classList.add('sticky');
-      video.pause();
-      video.currentTime = 0;
+      // video.pause();
+      // video.currentTime = 0;
     } else {
       navBarBackground.classList.remove('sticky');
-      video.play();
+      // video.play();
     }
 
   });

@@ -98,7 +98,7 @@ body {
   width: 100vw;
 }
 
-#videoContainer video {
+#videoContainer iframe {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
@@ -645,7 +645,7 @@ body {
     width: 100vw; /* Full width */
   }
 
-  #videoContainer video {
+  #videoContainer iframe {
     width: 100vw; /* Full width */
     height: 35vh; /* Adjust height for phones */
     object-fit: cover; /* Ensures the video covers the container */
@@ -819,7 +819,7 @@ body {
     width: 100vw; /* Full width */
   }
 
-  #videoContainer video {
+  #videoContainer iframe {
     width: 100vw; /* Full width */
     height: 35vh; /* Adjust height for phones */
     object-fit: cover; /* Ensures the video covers the container */
@@ -842,7 +842,7 @@ body {
     height: 70vh; /* Adjust height for tablets */
   }
 
-  #videoContainer video {
+  #videoContainer iframe {
     width: 100vw; /* Full width */
    height: 70vh; /* Adjust height for tablets */
   }
@@ -925,7 +925,7 @@ body {
     width: 100vw; /* Adjust height for tablets */
   }
 
-  #videoContainer video {
+  #videoContainer iframe {
     width: 100vw; /* Full width */
    height: 85vh; /* Adjust height for tablets */
   }
@@ -942,7 +942,7 @@ body {
     width: 100vw; /* Adjust height for tablets */
   }
 
-  #videoContainer video {
+  #videoContainer iframe {
     width: 100vw; /* Full width */
    height: 100vh; /* Adjust height for tablets */
   }
